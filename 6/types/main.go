@@ -29,7 +29,7 @@ func main() {
 	// fmt.Println(64f, reflect.TypeOf(64f))
 
 	totalPrice := 500
-	fmt.Println(totalprice)
+	fmt.Println(totalPrice)
 
 	// totalPrice := 1000
 	// fmt.Println(totalprice)
