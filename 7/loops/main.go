@@ -32,45 +32,58 @@
 // 	fmt.Println(changed)
 // }
 
+// package main
+
+// import (
+// 	"bufio"
+// 	"fmt"
+// 	"log"
+// 	"os"
+// 	"strconv"
+// )
+
+// func main() {
+// 	// var now time.Time = time.Now()
+// 	// var month time.Month = now.Month() // month := now.Month()
+// 	// fmt.Println(month)
+
+// 	//shadowing
+// 	// var fmt string = "inha"
+// 	// var int int = 7
+// 	// var k int = 11
+// 	// fmt.Println(int)
+
+// 	r := bufio.NewReader(os.Stdin)
+// 	i, err := r.ReadString('\n')
+// 	// fmt.Println(err)
+// 	if err != nil {
+// 		log.Fatal(err) //report the error and exit the program
+// 	}
+
+// 	i = strings.TrimSpce(i)
+// 	score, err := strconv.ParseFloat(i, 64)
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+
+// 	var pf string
+// 	if score >= 60 {
+// 		pf = "Pass"
+// 	} else {
+// 		pf = "Fail"
+// 	}
+// 	fmt.Println(pf, score)
+// }
+
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"log"
-	"os"
-	"strconv"
+	"math/rand"
 )
 
 func main() {
-	// var now time.Time = time.Now()
-	// var month time.Month = now.Month() // month := now.Month()
-	// fmt.Println(month)
-
-	//shadowing
-	// var fmt string = "inha"
-	// var int int = 7
-	// var k int = 11
-	// fmt.Println(int)
-
-	r := bufio.NewReader(os.Stdin)
-	i, err := r.ReadString('\n')
-	// fmt.Println(err)
-	if err != nil {
-		log.Fatal(err) //report the error and exit the program
-	}
-
-	i = strings.TrimSpce(i)
-	score, err := strconv.ParseFloat(i, 64)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	var pf string
-	if score >= 60 {
-		pf = "Pass"
-	} else {
-		pf = "Fail"
-	}
-	fmt.Println(pf, score)
+	// rand.Seed(10)
+	dice := rand.Intn(6) + 1 // 1~6
+	fmt.Println(dice)
 }

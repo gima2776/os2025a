@@ -17,3 +17,16 @@ func main() {
 	fmt.Println(a, b)
 	//fmt.Printf("%.2f\n", math.Sqrt(-25.0))
 }
+
+score, err := GetFloat()
+if err != nil {
+	log.Fatal(err)
+}
+var status := ""
+if score >= 60 {
+	status ="합격"
+}
+else {
+	states ="불합격"
+}
+fmt.Println("%.2점은 %s\n", score, status)
