@@ -1,13 +1,13 @@
 package main
 
 import (
+	"10/pkg/keyboard"
 	"fmt"
-	"keyboard"
 	"log"
 )
 
 func main() {
-	fmt.Print("점수 입력: ")
+	fmt.Print("점수 입력 : ")
 	score, err := keyboard.GetFloat()
 	if err != nil {
 		log.Fatal(err)
@@ -15,6 +15,6 @@ func main() {
 	if score >= 80 {
 		fmt.Printf("%.1f점은 합격!", score)
 	} else {
-		fmt.Printf("%.1f점은 불합격입니다", score)
+		fmt.Printf("%.1f점은 불합격입니다.", score)
 	}
 }

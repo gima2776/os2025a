@@ -1,0 +1,18 @@
+package main
+
+import (
+	"10/pkg/keyboard"
+	"fmt"
+	"log"
+)
+
+func main() {
+	fmt.Print("화씨 온도 입력 : ")
+	fahrenheit, err := keyboard.GetFloat()
+	if err != nil {
+		log.Fatal(err)
+	}
+	var celsius float64
+	celsius = (fahrenheit - 32) * 5 / 9
+	fmt.Printf("화씨온도 %.2f도는 섭씨온도 %.2f도입니다.", fahrenheit, celsius)
+}
